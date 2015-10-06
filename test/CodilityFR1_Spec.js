@@ -16,6 +16,12 @@ describe('CodilityFR1', function(){
          var results = Task.solution(X, A);
          expect(results).to.equal(9);
     });
+    it('should return 9 from A = [8, 8, 8, 8, 8], X = 3', function(){
+         var A = [8, 8, 8, 8, 8];
+         var X = 3;
+         var results = Task.solution(X, A);
+         expect(results).to.be.undefined();
+    });
 
   });
 });
