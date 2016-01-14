@@ -1,20 +1,34 @@
 {
   "name": "codility-solutions-fr",
   "version": "1.0.0",
-  "description": "",
+  "description": "codility results:",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "node_modules/.bin/mocha -w"
   },
   "dependencies": {
-    "chai": "^3.3.0"
+    "chai": "^3.3.0",
+    "python": "0.0.4",
+    "socket.io": "^1.3.7"
   },
   "devDependencies": {
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "fcagalj@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcagalj/codility-solutions-fr.git"
+  },
+  "keywords": [
+    "codility"
+  ],
+  "bugs": {
+    "url": "https://github.com/fcagalj/codility-solutions-fr/issues"
+  },
+  "homepage": "https://github.com/fcagalj/codility-solutions-fr#readme"
 }

@@ -1,8 +1,11 @@
 var expect = require('chai').expect;
-var Task = require('../lib/L2_MissingInteger.js'); 
+var testName = 'L5_PrefixSums_CountDiv.js';
+var Task = require('../lib/' + testName);
 
-describe('MissingInteger', function(){
-  describe('sortUniquePositive', function(){
+//mocha --grep CountDiv
+
+describe(testName, function(){
+/*  describe('sortUniquePositive', function(){
     it('should return  from A = [1,3,6,4,1,2] ', function(){
          var A = [1,3,6,4,1,2];
          var results = Task.sortUniquePositive(A);
@@ -33,7 +36,7 @@ describe('MissingInteger', function(){
          var results = Task.sortUniquePositive(A);
          expect(results).to.be.eql([]);
     });
-  });
+  });*/
   describe('Final results', function(){
     it('should return  from A = [1,3,6,4,1,2] ', function(){
          var A = [1,3,6,4,1,2];
