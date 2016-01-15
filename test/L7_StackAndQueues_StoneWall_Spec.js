@@ -1,0 +1,13 @@
+var expect = require('chai').expect;
+var testName = 'L7_StackAndQueues_StoneWall.js';
+var Task = require('../lib/' + testName);
+//mocha --grep StackAndQueues_StoneWall
+describe(testName, function () {
+    describe('Final results', function () {
+        it('should return 7 from H = [8, 8, 5, 7, 9, 8, 7, 4, 8]', function () {
+            var H = [8, 8, 5, 7, 9, 8, 7, 4, 8];
+            var results = Task.solution(H);
+            expect(results).to.equal(7);
+        });
+    });
+});

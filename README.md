@@ -1,6 +1,4 @@
-# Codility solutions
-
-2016
+# Codility solutions 2016 JavaScript
 
 ## Naming
 
