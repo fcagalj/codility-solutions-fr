@@ -2,8 +2,9 @@ var expect = require('chai').expect;
 var testName = 'L2_Arrays_OddOccurrencesInArray.js';
 var Task = require('../lib/' + testName);
 
-//mocha --grep OddOccurrencesInArray
 
+//mocha --grep OddOccurrencesInArray
+//node-debug _mocha --grep OddOccurrencesInArray
 describe(testName, function () {
     describe('Final results', function () {
         it('should return 7 from A = [9, 3, 9, 3, 9, 7, 9] ', function () {

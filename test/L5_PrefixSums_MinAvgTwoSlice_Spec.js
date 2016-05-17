@@ -8,7 +8,7 @@ describe(testName, function () {
         var results = Task.solution(A);
         expect(results).to.equal(1);
     });
-    it('should return 1 from A = [-10000, 10000] ', function () {
+    it('should return 0 from A = [-10000, 10000] ', function () {
         var A = [-10000, 10000];
         var results = Task.solution(A);
         expect(results).to.equal(0);
