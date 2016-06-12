@@ -11,5 +11,25 @@ describe(testName, function () {
             var results = Task.solution(A);
             expect(results).to.equal(11);
         });
+        it('should return 0 from A = [] ', function () {
+            var A = [];
+            var results = Task.solution(A);
+            expect(results).to.equal(0);
+        });
+        it('should return 0 from A = [1] ', function () {
+            var A = [1];
+            var results = Task.solution(A);
+            expect(results).to.equal(0);
+        });
+        it('should return 2 from A = [1, 1] ', function () {
+            var A = [1, 1];
+            var results = Task.solution(A);
+            expect(results).to.equal(1);
+        });
+        it('should return 3 from A = [1, 1, 1] ', function () {
+            var A = [1, 1, 1];
+            var results = Task.solution(A);
+            expect(results).to.equal(3);
+        });
     });
 });

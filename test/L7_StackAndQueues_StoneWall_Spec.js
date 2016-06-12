@@ -9,5 +9,15 @@ describe(testName, function () {
             var results = Task.solution(H);
             expect(results).to.equal(7);
         });
+        it('should return 1 from H = [1]', function () {
+            var H = [1];
+            var results = Task.solution(H);
+            expect(results).to.equal(1);
+        });
+        it('should return 3 from H = [1, 1, 1]', function () {
+            var H = [1, 1, 1];
+            var results = Task.solution(H);
+            expect(results).to.equal(1);
+        });
     });
 });
