@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#
-# Test that I passed on codility.com for TopTal company
-#
-
 
 # Task #1
 def binary_gap(N):
