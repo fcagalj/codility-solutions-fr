@@ -12,5 +12,20 @@ describe(testName, function () {
             var results = Task.solution(A);
             expect(results).to.equal(7);
         });
+        it('should return  ', function () {
+            var A = [1, 3, 2, 5, 4, 4, 6, 3, 2];
+            var results = Task.solution(A);
+            expect(results).to.equal(6);
+        });
+        it('should return  ', function () {
+            var A = [4, 4, 5, 7, 8, 6, 5];
+            var results = Task.solution(A);
+            expect(results).to.equal(6);
+        });
+        it('should return  ', function () {
+            var A = [1, 1, 2, 1, 1];
+            var results = Task.solution(A);
+            expect(results).to.equal(4);
+        });
     });
 });

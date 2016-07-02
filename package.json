@@ -8,13 +8,17 @@
   },
   "dependencies": {
     "chai": "^3.3.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7",
     "python": "0.0.4",
     "socket.io": "^1.3.7"
   },
   "devDependencies": {
     "jshint": "^2.8.0",
     "mocha": "^2.3.4",
-    "node-inspector": "^0.12.8"
+    "node-inspector": "^0.12.8",
+    "yargs": "^4.7.1"
   },
   "scripts": {
     "test": "mocha -u tdd"

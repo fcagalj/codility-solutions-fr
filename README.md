@@ -20,3 +20,11 @@ mocha --grep testName
 node-debug _mocha --grep testName
 
 ```
+
+## Generate test and exercise file automaticly
+
+```
+
+gulp generate --name ExerciseName
+
+```
