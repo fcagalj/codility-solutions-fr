@@ -1,11 +1,13 @@
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
     argv = require('yargs').argv,
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    mkpath = require('mkpath');
 
 var exercisePath = 'lib',
     testPath = 'test',
-    exerciseNeme = argv.name;
+    exerciseNeme = argv.name,
+    exerciseFolder = argv.folder ? '/' + argv.folder : '/random_exercises';
 
 var exercise =
 `
@@ -25,7 +27,7 @@ function solution(A) {
 var test =
 `
 var expect = require('chai').expect;
-var Task = require('./${exercisePath}/${exerciseNeme}.js');
+var Task = require('../../${exercisePath}${exerciseFolder}/${exerciseNeme}.js');
 
 //mocha --grep ${exerciseNeme}
 //node-debug _mocha --grep ${exerciseNeme}
@@ -42,9 +44,12 @@ describe('Testing ${exerciseNeme}', function () {
 `;
 
 //create files for new task
-gulp.task('generate', function() {
+gulp.task('generate', function() { 
 
-    require('fs').writeFileSync(exercisePath + '/' + exerciseNeme + '.js', exercise);
-    require('fs').writeFileSync(testPath + '/' + exerciseNeme + '_Spec.js', test);
+    mkpath.sync(exercisePath + exerciseFolder + '/', 0777);
+    mkpath.sync(testPath + exerciseFolder + '/', 0777);
+
+    require('fs').writeFileSync(exercisePath + exerciseFolder + '/' + exerciseNeme + '.js', exercise);
+    require('fs').writeFileSync(testPath + exerciseFolder + '/' + exerciseNeme + '_Spec.js', test);
 
 });

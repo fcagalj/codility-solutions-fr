@@ -8,15 +8,15 @@ node inspector environment to test algorithm in browser, and gulp task to genera
 
 ### For codility
 
-lib/LessionNo_Chapter_TestName.js
+lib/codility/LessionNo_Chapter_TestName.js
 
-test/LessionNo_Chapter_TestName_Spec.js
+test/codility/LessionNo_Chapter_TestName_Spec.js
 
 ### For other exercises
 
-lib/ExerciseName.js
+lib/ExerciseFolder/ExerciseName.js
 
-test/ExerciseName_Spec.js
+test/ExerciseFolder/ExerciseName_Spec.js
 
 ## Test locally
 
@@ -37,6 +37,6 @@ node-debug _mocha --grep ExerciseName
 
 ```
 
-gulp generate --name ExerciseName
+gulp generate --name ExerciseName --folder ExerciseFolder
 
 ```
