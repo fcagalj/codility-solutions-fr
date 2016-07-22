@@ -7,10 +7,14 @@ var Task = require('../../lib/lc_e/CS.js');
 describe('Testing CircularShift', function () {
     describe('Final results', function () {
         it('test case 1  ', function () {
-            var A = [];
-            var results = Task.solution(A);
+            var N = 20;
+            var results = Task.solution(N);
             expect(results).to.equal(7);
-            //expect(results).to.deep.equals([]);
+        });
+        it('test case 2  ', function () {
+            var N = 100;
+            var results = Task.solution(N);
+            expect(results).to.equal(13);
         });
         it('test rotate array  ', function () {
             //1234 -> 4123, 3412, 2341
