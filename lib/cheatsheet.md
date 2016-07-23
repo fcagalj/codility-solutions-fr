@@ -1,7 +1,7 @@
 
 # JS Cheatsheet
 
-## Array
+### Array
 Properties
     Array.prototype
     Array.prototype[@@unscopables]
@@ -43,7 +43,7 @@ Methods
     Array.prototype.values()
     Array.prototype[@@iterator]()
 
-## from(arrayLike[, mapFn[, thisArg])
+### from(arrayLike[, mapFn[, thisArg])
 ```javascript
 // Array-like object (arguments) to Array
 function f() {
@@ -64,7 +64,7 @@ Array.from("foo");      // ["f", "o", "o"]
 Array.from([1, 2, 3], x => x + x);  // [2, 4, 6]
 ```
 
-## of(element0[, element1[, ...[, elementN]]])
+### of(element0[, element1[, ...[, elementN]]])
 ```javascript
 Array(42)            // [undefined × 42]   
 Array.of(1);         // [1]
@@ -72,7 +72,7 @@ Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
-## concat(value1[, value2[, ...[, valueN]]])
+### concat(value1[, value2[, ...[, valueN]]])
 ```javascript
 let alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
@@ -92,7 +92,7 @@ for (let e of eArr) {
 }
 ```
 
-##entries()
+###entries()
 ```javascript
 var arr = ['a', 'b', 'c'];
 var eArr = arr.entries();
@@ -107,7 +107,7 @@ for (let e of eArr) {
 }
 ```
 
-## every(callback[, thisArg])
+### every(callback[, thisArg])
 ```javascript
 function isBigEnough(element, index, array) {
     return element >= 10;
@@ -117,7 +117,7 @@ function isBigEnough(element, index, array) {
 ```
 
 
-## fill(value[, start = 0[, end = this.length]])
+### fill(value[, start = 0[, end = this.length]])
 ```javascript
 [1, 2, 3].fill(4);                          // [4, 4, 4]
 [1, 2, 3].fill(4, 1);                       // [1, 4, 4]
@@ -129,7 +129,7 @@ Array(3).fill(4);                           // [4, 4, 4]
 [].fill.call({ length: 3 }, 4);             // {0: 4, 1: 4, 2: 4, length: 3}
 ```
 
-## filter()
+### filter()
 ```javascript
 function isBigEnough(value) {
   return value >= 10;
@@ -138,7 +138,7 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered is [12, 130, 44]
 ```
 
-## find(callback[, thisArg])
+### find(callback[, thisArg])
 ```javascript
 //callback (element, index, array)
 var inventory = [
@@ -164,7 +164,7 @@ console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
-## findIndex(callback[, thisArg])
+### findIndex(callback[, thisArg])
 ```javascript
 //callback (element, index, array)
 
@@ -172,7 +172,7 @@ console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 12].findIndex(isPrime)); // 
 ```
 
-## forEach(callback[, thisArg])
+### forEach(callback[, thisArg])
 ```javascript
 //callback (element, index, array)
 function Counter() {
@@ -192,7 +192,7 @@ obj.count       // 3
 obj.sum         // 16
 ```
 
-## includes(searchElement[, fromIndex])
+### includes(searchElement[, fromIndex])
 ```javascript
 [1, 2, 3].includes(2);     // true
 [1, 2, 3].includes(4);     // false
@@ -201,7 +201,7 @@ obj.sum         // 16
 [1, 2, NaN].includes(NaN); // true
 ```
 
-## indexOf(searchElement[, fromIndex = 0])
+### indexOf(searchElement[, fromIndex = 0])
 ```javascript
 var array = [2, 9, 9];
 array.indexOf(2);     // 0
@@ -211,7 +211,7 @@ array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
 
-## join([separator = ','])
+### join([separator = ','])
 ```javascript
 var a = ['Wind', 'Rain', 'Fire'];
 var myVar1 = a.join();      // assigns 'Wind,Rain,Fire' to myVar1
@@ -220,7 +220,7 @@ var myVar3 = a.join(' + '); // assigns 'Wind + Rain + Fire' to myVar3
 var myVar4 = a.join('');    // assigns 'WindRainFire' to myVar4
 ```
 
-## keys() values()
+### keys() values()
 ```javascriptvar 
 arr = ["a", "b", "c"];
 var iterator = arr.keys();
@@ -235,7 +235,7 @@ for (let letter of eArr) {
 }
 ```
 
-## lastIndexOf(searchElement[, fromIndex = arr.length - 1])
+### lastIndexOf(searchElement[, fromIndex = arr.length - 1])
 ```javascript
 var array = [2, 5, 9, 2];
 array.lastIndexOf(2);     // 3
@@ -246,7 +246,7 @@ array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
 ```
 
-## map(callback[, thisArg])
+### map(callback[, thisArg])
 ```javascript
 //callback(currentValue, index, array)
 var kvArray = [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}];
@@ -272,7 +272,7 @@ Array.prototype.map.call(str, function(x) {
 // Bonus: use '===' to test if original string was a palindrome
 ```
 
-## pop(), push(element)
+### pop(), push(element)
 ```javascript
 var vegetables = ['parsnip', 'potato'];
 var moreVegs = ['celery', 'beetroot'];
@@ -282,7 +282,7 @@ Array.prototype.push.apply(vegetables, moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-## reduce(callback[, initialValue]), reduceRight(callback[, initialValue])
+### reduce(callback[, initialValue]), reduceRight(callback[, initialValue])
 ```javascript 
 //callback(previousValue, currentValue, currentIndex, array)
 var maxCallback = ( pre, cur ) => Math.max( pre.x, cur.x );
@@ -298,14 +298,14 @@ var maxCallback2 = ( max, cur ) => Math.max( max, cur );
                         .reduce( maxCallback2 , 0 );
 ```
 
-## reverse()
+### reverse()
 ```javascript
 var myArray = ['one', 'two', 'three'];
 myArray.reverse(); 
 console.log(myArray) // ['three', 'two', 'one']
 ```
 
-## shift(), unshift(element)
+### shift(), unshift(element)
 ```javascript
 var letters = ['a', 'b', 'c', 'd'];
 var shifted = letters.shift(); 
@@ -317,7 +317,7 @@ letters.unshift('žnj');
 // letters after unshift: 'žnj', 'b', 'c', 'd'
 ```
 
-## slice([begin[, end]]), splice(start, deleteCount[, item1[, item2[, ...]]])
+### slice([begin[, end]]), splice(start, deleteCount[, item1[, item2[, ...]]])
 ```javascript
 //splice mutate array. String equivalent is subString()
 //if begin negative, counted from the end
@@ -331,7 +331,7 @@ console.log(y);          // [3]
 [14, 3, 77].splice(1, 2)    //  [3, 77]
 ```
 
-## some(callback[, thisArg])
+### some(callback[, thisArg])
 ```javascript
 //callback(currentValue, index, array)
 function isBiggerThan10(element, index, array) {
@@ -341,7 +341,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
-## sort([compareFunction])
+### sort([compareFunction])
 ```javascript
 var scores = [1, 10, 2, 21]; 
 scores.sort(); // [1, 10, 2, 21]
@@ -353,13 +353,13 @@ numbers.sort(function(a, b) {
 console.log(numbers); // [1, 2, 3, 4, 5]
 ```
 
-## toLocaleString();
+### toLocaleString();
 ```javascript
 // returns string representing toLocaleString methods on
 // each element, separated by a locale-specific String.
 ```
 
-## [@@iterator]()
+### [@@iterator]()
 ```javascript
 // initial value of the @@iterator property is the same 
 // function object as the initial value of the values()
