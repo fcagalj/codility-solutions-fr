@@ -119,7 +119,6 @@ function isBigEnough(element, index, array){
 [12, 54, 18, 130, 44].every(isBigEnough);//true
 ```
 
-
 ### fill(value[, start=0[, end=this.length]])
 ```javascript
 [1, 2, 3].fill(4);              // [4, 4, 4]
