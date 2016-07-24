@@ -2,6 +2,7 @@
 # JS Cheatsheet
 
 ### Array
+```javascript
 Properties
     Array.prototype
     Array.prototype[@@unscopables]
@@ -42,6 +43,7 @@ Methods
     Array.prototype.unshift()
     Array.prototype.values()
     Array.prototype[@@iterator]()
+```
 
 ### from(arrayLike[, mapFn[, thisArg])
 ```javascript
@@ -234,9 +236,9 @@ var myVar4 = a.join('');
 // assigns 'WindRainFire' to myVar4
 ```
 
-### keys(); values()
-```javascriptvar 
-arr = ["a", "b", "c"];
+### keys(); values();
+```javascript
+var arr = ["a", "b", "c"];
 var iterator = arr.keys();
 console.log(iterator.next()); 
 // { value: 0, done: false }
@@ -388,12 +390,12 @@ numbers.sort(function(a, b) {
 console.log(numbers); // [1, 2, 3, 4, 5]
 ```
 
-### toLocaleString();
+### toLocaleString()
 ```javascript
 // returns string representing toLocaleString
 // on each element, separated by local divider
 ```
-                                               | 
+                                                
 
 ### [@@iterator]()
 ```javascript
