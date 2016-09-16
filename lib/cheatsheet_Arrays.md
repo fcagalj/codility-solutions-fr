@@ -186,6 +186,7 @@ console.log([4, 6, 7, 12].findIndex(isPrime));
 ### forEach(callback[, thisArg])
 ```javascript
 //callback (element, index, array)
+//does not modify array
 function Counter() {
   this.sum = 0;
   this.count = 0;
