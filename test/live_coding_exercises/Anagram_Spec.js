@@ -17,6 +17,21 @@ describe('Testing Anagram', function () {
             expect(results).to.equal(1);
         });
         it('test case 3  ', function () {
+          var w = 'aaaaiillmnnovvo';
+          var results = Task.solution(w);
+          expect(results).to.equal(1);
+        });
+        it('test case 4  ', function () {
+          var w = 'aaaaiillmnnopvv';
+          var results = Task.solution(w);
+          expect(results).to.equal(0);
+        });
+        it('test case 5  ', function () {
+          var w = 'aiillmnanaoovav';
+          var results = Task.solution(w);
+          expect(results).to.equal(1);
+        });
+        it('test case 6  ', function () {
             var w = 'dfgddgfb';
             var results = Task.solution(w);
             expect(results).to.equal(0);

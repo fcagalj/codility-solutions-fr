@@ -34,7 +34,7 @@ describe('Testing CircularPrime', function () {
     });
     describe('Is Prime', function () {
         it('test primes  ', function () {
-            var N = [2, 3, 5, 7, 11, 13, 17, 19, 31, 71];
+            var N = [2, 3, 5, 7, 11, 13, 17, 19, 31, 71, 59, 89, 97];
             N.forEach(function (n) {
                 expect(Task._isPrime(n)).to.equal(true);
             });

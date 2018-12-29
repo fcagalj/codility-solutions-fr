@@ -1,15 +1,15 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     rename = require('gulp-rename'),
     argv = require('yargs').argv,
     gutil = require('gulp-util'),
     mkpath = require('mkpath');
 
-var exercisePath = 'lib',
+let exercisePath = 'lib',
     testPath = 'test',
     exerciseNeme = argv.name,
     exerciseFolder = argv.folder ? '/' + argv.folder : '/random_exercises';
 
-var exercise =
+let exercise =
 `
 'use strict';
 
@@ -24,18 +24,18 @@ function solution(A) {
 }
 `;
 
-var test =
+let test =
 `
-var expect = require('chai').expect;
-var Task = require('../../${exercisePath}${exerciseFolder}/${exerciseNeme}.js');
+const expect = require('chai').expect;
+const Task = require('../../${exercisePath}${exerciseFolder}/${exerciseNeme}.js');
 
 //mocha --grep ${exerciseNeme}
 //node-debug _mocha --grep ${exerciseNeme}
 describe('Testing ${exerciseNeme}', function () {
     describe('Final results', function () {
         it('test case 1  ', function () {
-            var A = [];
-            var results = Task.solution(A);
+            let A = [];
+            const results = Task.solution(A);
             expect(results).to.equal(5);
             //expect(results).to.deep.equals([]);
         });
